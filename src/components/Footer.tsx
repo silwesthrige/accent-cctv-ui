@@ -33,11 +33,10 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[280px_1fr]">
           <div>
-            <a href="#" className="flex items-center gap-2">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-brand-blue to-brand-violet font-display text-sm font-bold text-white">
-                A
+            <a href="#" className="flex items-center">
+              <span className="flex items-center rounded-lg bg-white px-2.5 py-1.5 shadow-sm">
+                <img src="/accent-logo.png" alt="Accent CCTV Solutions" className="h-7 w-auto" />
               </span>
-              <span className="font-display text-lg font-bold text-foreground">Accent CCTV Solutions</span>
             </a>
             <p className="mt-4 max-w-xs text-sm text-foreground/50">
               Enterprise cloud video security, AI analytics, and access control — unified in

@@ -136,12 +136,9 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-brand-blue to-brand-violet font-display text-sm font-bold text-white">
-            A
-          </span>
-          <span className="font-display text-base font-bold leading-tight text-foreground sm:text-lg">
-            Accent CCTV Solutions
+        <a href="#" className="flex items-center">
+          <span className="flex items-center rounded-lg bg-white px-2.5 py-1.5 shadow-sm">
+            <img src="/accent-logo.png" alt="Accent CCTV Solutions" className="h-6 w-auto sm:h-7" />
           </span>
         </a>
 
@@ -191,7 +188,9 @@ export function Navbar() {
             className="fixed inset-0 z-[70] bg-background lg:hidden"
           >
             <div className="flex items-center justify-between px-6 py-4">
-              <span className="font-display text-lg font-bold text-foreground">Accent CCTV Solutions</span>
+              <span className="flex items-center rounded-lg bg-white px-2.5 py-1.5 shadow-sm">
+                <img src="/accent-logo.png" alt="Accent CCTV Solutions" className="h-6 w-auto" />
+              </span>
               <button className="text-foreground" onClick={() => setMobileOpen(false)} aria-label="Close menu">
                 <X className="h-6 w-6" />
               </button>

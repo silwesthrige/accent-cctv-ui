@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f6f7fb;
+  --surface: #ffffff;
+  --surface-soft: #eef0f6;
+  --foreground: #0a0e1a;
+  --line: rgba(10, 14, 26, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(10, 14, 26, 0.1);
+  --glass-strong-bg: rgba(246, 247, 251, 0.75);
+  --dot-color: rgba(10, 14, 26, 0.16);
+}
+
+.dark {
+  --background: #0a0e1a;
+  --surface: #111a33;
+  --surface-soft: #0d1224;
+  --foreground: #ffffff;
+  --line: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-strong-bg: rgba(10, 14, 26, 0.72);
+  --dot-color: rgba(255, 255, 255, 0.14);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-foreground: var(--foreground);
+  --color-line: var(--line);
+
+  /* Fixed (non-themed) navy — for text/icons on permanently-colored elements */
+  --color-ink: #0a0e1a;
+
+  --color-brand-blue: #2f6ff0;
+  --color-brand-violet: #6c5ce7;
+
+  --font-display: var(--font-manrope);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background: rgba(47, 111, 240, 0.35);
+  color: #ffffff;
+}
+
+.font-display {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Gradient text */
+.text-gradient {
+  background-image: linear-gradient(90deg, #2f6ff0, #6c5ce7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Glassmorphism surfaces */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-strong {
+  background: var(--glass-strong-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* Dot grid background */
+.bg-dot-grid {
+  background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Drifting gradient blobs */
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(4%, -6%) scale(1.08);
+  }
+  66% {
+    transform: translate(-3%, 4%) scale(0.94);
+  }
+}
+
+.animate-blob {
+  animation: blob-drift 22s ease-in-out infinite;
+}
+
+.animate-blob-slow {
+  animation: blob-drift 32s ease-in-out infinite;
+}
+
+/* Infinite marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+/* Bounce chevron for scroll indicator */
+@keyframes bounce-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-soft {
+  animation: bounce-soft 2s ease-in-out infinite;
+}
+
+/* Feature tab auto-advance progress bar */
+@keyframes tab-progress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.animate-tab-progress {
+  transform-origin: left;
+  animation: tab-progress linear forwards;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(var(--orbit-radius, 0px)) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(var(--orbit-radius, 0px)) rotate(-360deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbit 24s linear infinite;
+}

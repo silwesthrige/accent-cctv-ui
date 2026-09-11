@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Video, Radar, Plug, KeyRound } from "lucide-react";
+import { Video, Radar, DoorOpen, Wrench } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 
 const DURATION = 6000;
@@ -11,33 +11,33 @@ const tabs = [
   {
     icon: Video,
     label: "Monitoring",
-    title: "See every site, in real time",
+    title: "See your property, in real time",
     description:
-      "A single command center streams live video from every camera across every location, with instant playback and multi-site tiling.",
+      "Watch live video from every camera in the free mobile app, with instant playback whenever something happens.",
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80",
   },
   {
     icon: Radar,
     label: "Detection",
-    title: "AI that flags what matters",
+    title: "AcuSense filters out the noise",
     description:
-      "Accent CCTV's models distinguish people, vehicles, and anomalies from background noise — cutting false alarms by up to 90%.",
+      "Hikvision AcuSense technology tells people and vehicles apart from blowing leaves and passing headlights — cutting false alarms by up to 90%.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    icon: Plug,
-    label: "Integration",
-    title: "Fits inside your existing stack",
+    icon: DoorOpen,
+    label: "Video Door Entry",
+    title: "See who's calling before you answer",
     description:
-      "Open APIs and 500+ integrations connect Accent CCTV to your alarm panels, ERP, and identity providers without custom code.",
+      "Talk to visitors, view couriers and unlock the door remotely from your phone, wherever you are.",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    icon: KeyRound,
-    label: "Access Control",
-    title: "Doors, badges, and visitors — unified",
+    icon: Wrench,
+    label: "Installation",
+    title: "Fitted by our own certified engineers",
     description:
-      "Grant, revoke, and audit access from anywhere. Every door event is timestamped alongside the matching camera feed.",
+      "Every system is surveyed, cabled and configured by our in-house team — never subcontracted, always tidy.",
     image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
   },
 ];
@@ -57,8 +57,8 @@ export function FeatureTabs() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="Capabilities"
-          title="Built for how security teams"
-          accent="actually work"
+          title="Built for how you"
+          accent="actually use it"
         />
 
         <div className="mt-16 grid grid-cols-1 gap-4 lg:grid-cols-[340px_1fr] lg:gap-10">

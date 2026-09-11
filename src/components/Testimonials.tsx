@@ -8,31 +8,31 @@ import { SectionHeading } from "./SectionHeading";
 const testimonials = [
   {
     quote:
-      "Accent CCTV replaced four disconnected systems with one console. Our security team cut incident response time in half within the first quarter.",
-    name: "Dana Whitfield",
-    title: "Director of Security",
-    company: "Meridian Corp",
+      "The team surveyed our house, explained every option without any pressure, and had a four-camera system running the same week. Couldn't fault them.",
+    name: "Sarah Whitfield",
+    title: "Homeowner",
+    company: "Manchester",
   },
   {
     quote:
-      "The AI analytics caught a perimeter breach our old cameras would have missed entirely. It paid for itself in the first month.",
+      "We switched our warehouse over to Accent after our old alarm kept false-triggering. The AcuSense cameras alone have cut our night call-outs to almost zero.",
     name: "Marcus Ilori",
-    title: "VP of Operations",
+    title: "Operations Manager",
     company: "Cargill Logistics",
   },
   {
     quote:
-      "Rolling out to 60 new stores used to take months. With Accent CCTV's cloud onboarding, we were live everywhere in three weeks.",
+      "Rolling out CCTV to five new stores used to mean weeks of disruption. Accent had every site live within a fortnight, with barely any downtime on the shop floor.",
     name: "Priya Anand",
-    title: "Head of Loss Prevention",
+    title: "Store Operations Lead",
     company: "Halcyon Retail",
   },
   {
     quote:
-      "Our compliance audits went from a week of manual log-pulling to a five-minute export. The access control integration alone justified the switch.",
+      "Video door entry across our reception and staff entrance means we always know who's at the door before it's opened. Support have been brilliant since day one.",
     name: "Tom Reyes",
-    title: "CISO",
-    company: "Northgate Bank",
+    title: "Facilities Manager",
+    company: "Northgate Offices",
   },
 ];
 

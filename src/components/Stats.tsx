@@ -1,14 +1,14 @@
 "use client";
 
 import CountUp from "react-countup";
-import { Camera, Percent, Globe, Zap } from "lucide-react";
+import { Camera, Award, Star, Clock } from "lucide-react";
 import { Reveal, RevealGroup, RevealItem } from "./Reveal";
 
 const stats = [
-  { icon: Camera, value: 480000, suffix: "+", label: "Cameras Deployed" },
-  { icon: Percent, value: 99.98, decimals: 2, suffix: "%", label: "Platform Uptime" },
-  { icon: Globe, value: 42, label: "Countries Served" },
-  { icon: Zap, value: 400, suffix: "ms", label: "Avg. Alert Response" },
+  { icon: Camera, value: 2500, suffix: "+", label: "Systems Installed" },
+  { icon: Award, value: 15, suffix: "+", label: "Years of Experience" },
+  { icon: Star, value: 4.9, decimals: 1, suffix: "/5", label: "Average Customer Rating" },
+  { icon: Clock, value: 60, suffix: " min", label: "Callout Response Time" },
 ];
 
 export function Stats() {
@@ -21,7 +21,7 @@ export function Stats() {
             By the numbers
           </span>
           <h2 className="font-display mt-4 text-3xl font-bold text-foreground sm:text-4xl">
-            Security infrastructure that scales globally
+            Trusted by homes and businesses across the UK
           </h2>
         </Reveal>
 

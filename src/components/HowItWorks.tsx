@@ -7,23 +7,23 @@ import { SectionHeading } from "./SectionHeading";
 const steps = [
   {
     icon: ClipboardList,
-    title: "Assess & Design",
-    description: "Our engineers map your sites and design a coverage plan tailored to your risk profile.",
+    title: "Free Site Survey",
+    description: "Our engineers visit your property and design a camera and alarm layout around your risks.",
   },
   {
     icon: HardHat,
-    title: "Install & Onboard",
-    description: "Certified installers deploy hardware while your team is onboarded to the platform.",
+    title: "Professional Install",
+    description: "Our own certified engineers fit and configure everything — never subcontracted.",
   },
   {
     icon: MonitorCheck,
     title: "Monitor & Respond",
-    description: "AI analytics run around the clock, alerting your team the moment something needs attention.",
+    description: "AcuSense analytics run around the clock, alerting you the moment something needs attention.",
   },
   {
     icon: TrendingUp,
-    title: "Optimize & Scale",
-    description: "Quarterly reviews and effortless expansion keep your security posture ahead of growth.",
+    title: "Support & Aftercare",
+    description: "Ongoing maintenance and a UK-based support line keep your system running for years.",
   },
 ];
 

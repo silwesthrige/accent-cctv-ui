@@ -43,7 +43,7 @@ export function Hero() {
           className="glass mx-auto flex w-fit items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium text-foreground/80"
         >
           <Sparkles className="h-3.5 w-3.5 text-brand-blue" />
-          New: AI Threat Detection 2.0
+          Free Site Survey — Book Today
         </motion.div>
 
         <motion.h1
@@ -54,7 +54,7 @@ export function Hero() {
         >
           Intelligent Security.
           <br />
-          Built for <span className="text-gradient">Scale</span>.
+          Expertly <span className="text-gradient">Installed</span>.
         </motion.h1>
 
         <motion.p
@@ -63,9 +63,9 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mx-auto mt-6 max-w-2xl text-lg text-foreground/60 sm:text-xl"
         >
-          Accent CCTV Solutions unifies cloud video, AI-powered analytics, and access
-          control into a single command center — so enterprise teams can secure every
-          site without drowning in dashboards.
+          Accent CCTV Solutions designs, supplies and installs professional CCTV,
+          alarm and video door entry systems for homes and businesses — built on
+          Hikvision, Dahua and the industry&apos;s leading technology.
         </motion.p>
 
         <motion.div
@@ -78,7 +78,7 @@ export function Hero() {
             href="#demo"
             className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-brand-blue to-brand-violet px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-blue/30 transition duration-300 hover:scale-[1.03] hover:shadow-2xl hover:shadow-brand-violet/50"
           >
-            Get a Demo
+            Get a Free Quote
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a
@@ -88,7 +88,7 @@ export function Hero() {
             <span className="flex h-6 w-6 items-center justify-center rounded-full bg-foreground/10">
               <Play className="h-3 w-3 fill-foreground text-foreground" />
             </span>
-            Watch Demo
+            See It In Action
           </a>
         </motion.div>
 
@@ -119,14 +119,14 @@ export function Hero() {
 
               <div className="absolute left-6 top-6 flex items-center gap-2 rounded-lg bg-background/70 px-3 py-2 text-xs font-medium text-foreground backdrop-blur">
                 <span className="h-2 w-2 rounded-full bg-emerald-400" />
-                Live — 214 cameras online
+                Live — AcuSense monitoring active
               </div>
 
               <div className="absolute bottom-6 left-6 right-6 flex flex-wrap gap-3">
                 {[
-                  { icon: Activity, label: "Anomalies", value: "3 flagged" },
-                  { icon: ShieldCheck, label: "Uptime", value: "99.98%" },
-                  { icon: Users, label: "Foot traffic", value: "1,204 today" },
+                  { icon: ShieldCheck, label: "Detection", value: "AcuSense Active" },
+                  { icon: Activity, label: "False Alarms", value: "0 today" },
+                  { icon: Users, label: "Response Time", value: "< 60 min" },
                 ].map((stat) => (
                   <div
                     key={stat.label}

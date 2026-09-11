@@ -1,11 +1,11 @@
 import { Building2, Landmark, Warehouse, ShoppingBag, GraduationCap, Plane, Hospital, Factory } from "lucide-react";
 
 const logos = [
-  { icon: Building2, name: "Meridian Corp" },
-  { icon: Landmark, name: "Northgate Bank" },
+  { icon: Building2, name: "Northgate Offices" },
+  { icon: Landmark, name: "Meridian Corp" },
   { icon: Warehouse, name: "Cargill Logistics" },
   { icon: ShoppingBag, name: "Halcyon Retail" },
-  { icon: GraduationCap, name: "Ashford University" },
+  { icon: GraduationCap, name: "Ashford Academy" },
   { icon: Plane, name: "Skyline Transit" },
   { icon: Hospital, name: "Wellpoint Health" },
   { icon: Factory, name: "Ironclad Industrial" },
@@ -16,7 +16,7 @@ export function TrustBar() {
   return (
     <section className="relative border-y border-line bg-background py-10">
       <p className="mb-8 text-center text-xs font-medium uppercase tracking-[0.2em] text-foreground/40">
-        Trusted by security teams at
+        Trusted by homes and businesses including
       </p>
       <div className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />

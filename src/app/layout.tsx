@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -15,9 +17,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Accent CCTV Solutions | Intelligent Security. Built for Scale.",
+  title: "Accent CCTV Solutions | CCTV, Alarms & Access Control Installers",
   description:
-    "Accent CCTV Solutions is the enterprise cloud video security platform — AI analytics, smart cameras, and access control unified in one command center.",
+    "Accent CCTV Solutions supplies and installs professional CCTV, WiFi cameras, alarm systems and video door entry for homes and businesses, using Hikvision, Dahua and other leading technology.",
 };
 
 const THEME_INIT_SCRIPT = `
@@ -41,7 +43,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground font-body" suppressHydrationWarning>
-        {children}
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

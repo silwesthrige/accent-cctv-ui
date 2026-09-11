@@ -1,27 +1,30 @@
 "use client";
 
+import Link from "next/link";
 import { AtSign, MessageCircle, Rss, Globe, ArrowRight, ShieldCheck } from "lucide-react";
+import { allProductLinks } from "@/lib/nav";
 
 const columns = [
   {
-    title: "Product",
-    links: ["Smart Cameras", "AI Analytics", "Access Control", "Cloud Storage", "Mobile App"],
-  },
-  {
-    title: "Solutions",
-    links: ["Enterprise Offices", "Industrial & Logistics", "Education", "Retail", "Healthcare"],
+    title: "Products",
+    links: allProductLinks.map((p) => ({ label: p.title, href: p.href })),
   },
   {
     title: "Company",
-    links: ["About Us", "Careers", "Newsroom", "Partners", "Contact"],
-  },
-  {
-    title: "Resources",
-    links: ["Documentation", "API Reference", "Case Studies", "Blog", "Help Center"],
+    links: [
+      { label: "About Us", href: "/about" },
+      { label: "Projects", href: "/projects" },
+      { label: "Customer Support", href: "/support" },
+      { label: "Get a Free Quote", href: "/support" },
+    ],
   },
   {
     title: "Legal",
-    links: ["Privacy Policy", "Terms of Service", "Security", "Compliance", "Cookie Policy"],
+    links: [
+      { label: "Privacy Policy", href: "#" },
+      { label: "Terms of Service", href: "#" },
+      { label: "Cookie Policy", href: "#" },
+    ],
   },
 ];
 
@@ -33,23 +36,23 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[280px_1fr]">
           <div>
-            <a href="#" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <span className="flex items-center rounded-lg bg-white px-2.5 py-1.5 shadow-sm">
                 <img src="/accent-logo.png" alt="Accent CCTV Solutions" className="h-7 w-auto" />
               </span>
-            </a>
+            </Link>
             <p className="mt-4 max-w-xs text-sm text-foreground/50">
-              Enterprise cloud video security, AI analytics, and access control — unified in
-              one platform.
+              Professional CCTV, alarm and video door entry systems — supplied and installed
+              for homes and businesses.
             </p>
 
             <div className="mt-6">
-              <p className="text-sm font-medium text-foreground">Get product updates</p>
+              <p className="text-sm font-medium text-foreground">Join our mailing list</p>
               <form className="mt-3 flex items-center gap-2" onSubmit={(e) => e.preventDefault()}>
                 <input
                   type="email"
                   required
-                  placeholder="you@company.com"
+                  placeholder="you@email.com"
                   className="w-full rounded-full border border-line bg-foreground/5 px-4 py-2.5 text-sm text-foreground placeholder:text-foreground/40 outline-none focus:border-brand-blue/50"
                 />
                 <button
@@ -63,16 +66,16 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             {columns.map((col) => (
               <div key={col.title}>
                 <h4 className="font-display text-sm font-semibold text-foreground">{col.title}</h4>
                 <ul className="mt-4 flex flex-col gap-3">
                   {col.links.map((link) => (
-                    <li key={link}>
-                      <a href="#" className="text-sm text-foreground/50 transition hover:text-foreground">
-                        {link}
-                      </a>
+                    <li key={link.label}>
+                      <Link href={link.href} className="text-sm text-foreground/50 transition hover:text-foreground">
+                        {link.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -84,8 +87,7 @@ export function Footer() {
         <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-line pt-8 sm:flex-row">
           <div className="flex items-center gap-2 text-xs text-foreground/40">
             <ShieldCheck className="h-4 w-4 text-brand-blue" />
-            SOC 2 Type II Certified &copy; {new Date().getFullYear()} Accent CCTV Solutions, Inc. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Accent CCTV Solutions. All rights reserved.
           </div>
 
           <div className="flex items-center gap-5">
@@ -100,7 +102,7 @@ export function Footer() {
             ))}
             <button className="flex items-center gap-1.5 text-xs text-foreground/50 transition hover:text-foreground">
               <Globe className="h-4 w-4" />
-              English (US)
+              English (UK)
             </button>
           </div>
         </div>
